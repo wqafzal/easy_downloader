@@ -151,7 +151,7 @@ class EasyDownloader {
 
   
   ///Remove task
-  Future<void> removeDownloadTask(int id) async {
+  Future<bool?> removeDownloadTask(int id) async {
     return _localeStorage.deleteDownloadTask(id);
   }
 }
