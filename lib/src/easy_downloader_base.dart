@@ -148,4 +148,10 @@ class EasyDownloader {
   ///listen download task by id
   Stream<void>? downloadTaskStream(int id) =>
       _localeStorage.watchDownloadTask(id);
+
+  
+  ///Remove task
+  Future<void> removeDownloadTask(int id) async {
+    return _localeStorage.deleteDownloadTask(id);
+  }
 }
